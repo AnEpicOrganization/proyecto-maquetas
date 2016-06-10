@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <!--separar style a un arhivo aparte-->
+    <style>
+      h1{
+        text-align: center;
+        padding:20px;
+      }
+    </style>
+
+
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Ficha veterinaria</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+          <form class="" action="index.html" method="post">
+            <div class="form-group">
+              <label for=""><abbr title="Dispositivo de Identificación Individual Oficial">DIIO</abbr>:</label>
+              <input type="text" name="name" value="12651723976" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="">Descripción:</label>
+            <textarea name="des" rows="8" cols="40" class="form-control" >vaca bovina cuadrupeda mamifera</textarea>
+            </div>
+            <div class="form-group">
+              <label for="">Heridas:</label>
+            <label class="checkbox-inline"><input type="radio" name="herida" value="" id="show_her">Si</label>
+            <label class="checkbox-inline"><input type="radio" name="herida" value="" id="hide_her">No</label>
+            <textarea name="herida_des" rows="8" cols="40" class="form-control" id="her_des">cortes en las muñecas (emo probablemente)</textarea>
+            </div>
+            <div class="form-group">
+              <label for="">Enfermedad:</label>
+              <label class="checkbox-inline"><input type="radio" name="enfermo" value="" id="show_enf">Si</label>
+              <label class="checkbox-inline"><input type="radio" name="enfermo" value="" id="hide_enf">No</label>
+              <textarea name="enf_des" rows="8" cols="40" class="form-control" id="enf_des">Cancer</textarea>
+            </div>
+          </form>
+          <p>Veterinario: Dr. House</p>
+        </div>
+        <div class="col-md-2">
+
+        </div>
+      </div>
+
+    </div>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    $("#hide_her").click(function(){
+      $("#her_des").hide();
+    });
+    $("#show_her").click(function(){
+      $("#her_des").show();
+    });
+
+    $("#hide_enf").click(function(){
+      $("#enf_des").hide();
+    });
+    $("#show_enf").click(function(){
+      $("#enf_des").show();
+    });
+    </script>
+  </body>
+</html>
